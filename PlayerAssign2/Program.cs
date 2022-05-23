@@ -54,7 +54,7 @@ namespace PlayerAssign2
                 Console.WriteLine("would you like to print the data to file? Press y for yes. If not, \n press another key+ Enter");
             if (Console.ReadKey().Equals('y'))
             {
-                using (StreamWriter sw = new StreamWriter("PlayerData.txt"))
+                using (FileStream fs = File.Append("PlayerData.txt"))
                 {
                     foreach (Infantry p in players)
                     {
